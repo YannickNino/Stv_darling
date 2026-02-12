@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef, #fcbad3);
+  background-size: 300% 300%;
+  animation: romanticBg 12s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+@keyframes romanticBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.question {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#yesButton {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #ff3366;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#yesButton:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background: #ff174f;
+}
+
+#yesButton:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Coeurs animés */
+.heart {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  animation: floatUp 2.5s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-80px) scale(1.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-160px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  #yesButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.romantic-line {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 20px 0;
+  opacity: 0.9;
+}
+#heartRain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.falling-heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10%); }
+  100% { transform: translateY(110%); }
+}
