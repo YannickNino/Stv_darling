@@ -36,12 +36,14 @@ body {
 h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
+  color: #000;
 }
 
 .message {
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 30px;
+  color: #000;
 }
 
 .photo-container {
@@ -67,6 +69,7 @@ h1 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #000;
 }
 
 #yesButton {
@@ -156,6 +159,7 @@ h1 {
   font-style: italic;
   font-size: 1.1rem;
   margin: 20px 0;
+  color: #000;
   opacity: 0.9;
 }
 
