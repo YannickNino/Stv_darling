@@ -158,6 +158,26 @@ h1 {
   margin: 20px 0;
   opacity: 0.9;
 }
+
+.signature {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.signature p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.year {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 #heartRain {
   position: fixed;
   top: 0;
